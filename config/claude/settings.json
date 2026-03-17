@@ -5,15 +5,6 @@
     "AWS_REGION": "us-east-1",
     "CLAUDE_CODE_USE_BEDROCK": "1"
   },
-  "model": "us.anthropic.claude-opus-4-6-v1[1m]",
-  "statusLine": {
-    "type": "command",
-    "command": "npx -y ccstatusline@latest",
-    "padding": 0
-  },
-  "enabledPlugins": {
-    "frontend-design@claude-plugins-official": true
-  },
   "permissions": {
     "allow": [
       "Read(./**)",
@@ -77,7 +68,17 @@
     ],
     "defaultMode": "acceptEdits"
   },
+  "model": "us.anthropic.claude-opus-4-6-v1[1m]",
+  "statusLine": {
+    "type": "command",
+    "command": "npx -y ccstatusline@latest",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
+  },
   "alwaysThinkingEnabled": true,
-  "skipDangerousModePermissionPrompt": true,
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "skipDangerousModePermissionPrompt": true
 }
