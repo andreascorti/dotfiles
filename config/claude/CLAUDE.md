@@ -26,4 +26,6 @@ For questions about GitHub, use the gh tool.
 
 Never mention Claude Code in PR descriptions, PR comments, or issue comments.
 
+Do not include "Co-Authored-By" lines in commit messages.
+
 Do not include a "Test plan" section in PR descriptions.
