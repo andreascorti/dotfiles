@@ -1,9 +1,10 @@
 {
   "awsAuthRefresh": "aws sso login --profile claude-sso",
   "env": {
-    "AWS_PROFILE": "claude-sso",
-    "AWS_REGION": "us-east-1",
-    "CLAUDE_CODE_USE_BEDROCK": "1"
+    "AWS_PROFILE": "claude",
+    "AWS_REGION": "eu-central-1",
+    "CLAUDE_CODE_USE_BEDROCK": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "permissions": {
     "allow": [
@@ -64,11 +65,13 @@
       "mcp__code-to-figma__figma_get_state",
       "mcp__code-to-figma__figma_edit_text",
       "mcp__code-to-figma__figma_set_properties",
-      "mcp__angular-cli__list_projects"
+      "mcp__angular-cli__list_projects",
+      "mcp__obsidian",
+      "mcp__pencil"
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "us.anthropic.claude-opus-4-6-v1[1m]",
+  "model": "eu.anthropic.claude-opus-4-6-v1[1m]",
   "statusLine": {
     "type": "command",
     "command": "npx -y ccstatusline@latest",
@@ -76,7 +79,8 @@
   },
   "enabledPlugins": {
     "frontend-design@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true
   },
   "alwaysThinkingEnabled": true,
   "effortLevel": "high",

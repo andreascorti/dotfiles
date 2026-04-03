@@ -25,3 +25,6 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 eval "$(direnv hook zsh)"
 source <(fzf --zsh)
+
+# Machine-specific overrides (not committed)
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
