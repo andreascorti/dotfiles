@@ -86,8 +86,9 @@ fi
 
 # 7. Symlink Claude Code config
 info "Linking Claude Code config..."
-backup_and_link "$DOTFILES_DIR/config/claude/CLAUDE.md"      "$HOME/.claude/CLAUDE.md"
-backup_and_link "$DOTFILES_DIR/config/claude/settings.json"  "$HOME/.claude/settings.json"
+backup_and_link "$DOTFILES_DIR/config/claude/CLAUDE.md"       "$HOME/.claude/CLAUDE.md"
+backup_and_link "$DOTFILES_DIR/config/claude/settings.json"   "$HOME/.claude/settings.json"
+backup_and_link "$DOTFILES_DIR/config/claude/statusline.mjs"  "$HOME/.claude/statusline.mjs"
 
 # 8. Summary
 echo ""

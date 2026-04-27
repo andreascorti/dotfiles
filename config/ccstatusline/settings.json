@@ -3,9 +3,28 @@
   "lines": [
     [
       {
-        "id": "3",
-        "type": "context-percentage",
+        "id": "ctx-icon",
+        "type": "custom-text",
+        "customText": "📊",
         "color": "black"
+      },
+      {
+        "id": "3",
+        "type": "context-bar",
+        "color": "black",
+        "rawValue": true
+      },
+      {
+        "id": "proj-icon",
+        "type": "custom-text",
+        "customText": "📁",
+        "color": "cyan"
+      },
+      {
+        "id": "git-root",
+        "type": "git-root-dir",
+        "color": "cyan",
+        "rawValue": true
       },
       {
         "id": "5",
@@ -13,14 +32,47 @@
         "color": "magenta"
       },
       {
+        "id": "git-status",
+        "type": "custom-command",
+        "commandPath": "/Users/ascorti/.config/ccstatusline/git-status.sh",
+        "color": "green",
+        "timeout": 2000
+      },
+      {
+        "id": "session-icon",
+        "type": "custom-text",
+        "customText": "⏱",
+        "color": "yellow"
+      },
+      {
+        "id": "session-clock",
+        "type": "session-clock",
+        "color": "yellow",
+        "rawValue": true
+      },
+      {
+        "id": "thinking-icon",
+        "type": "custom-text",
+        "customText": "🧠",
+        "color": "blue"
+      },
+      {
         "id": "7",
         "type": "thinking-effort",
-        "color": "blue"
+        "color": "blue",
+        "rawValue": true
+      },
+      {
+        "id": "model-icon",
+        "type": "custom-text",
+        "customText": "🤖",
+        "color": "cyan"
       },
       {
         "id": "1",
         "type": "model",
-        "color": "cyan"
+        "color": "cyan",
+        "rawValue": true
       }
     ],
     [
@@ -39,7 +91,7 @@
   "powerline": {
     "enabled": false,
     "separators": [
-      ""
+      ""
     ],
     "separatorInvertBackground": [
       false
