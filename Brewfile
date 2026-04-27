@@ -1,10 +1,12 @@
 # CLI essentials
+brew "ffmpeg"
 brew "git"
 brew "gh"
 brew "jq"
 brew "tree"
 brew "ripgrep"
 brew "fzf"
+brew "terminal-notifier"
 
 # Shell and prompt
 brew "starship"

@@ -89,6 +89,8 @@ info "Linking Claude Code config..."
 backup_and_link "$DOTFILES_DIR/config/claude/CLAUDE.md"       "$HOME/.claude/CLAUDE.md"
 backup_and_link "$DOTFILES_DIR/config/claude/settings.json"   "$HOME/.claude/settings.json"
 backup_and_link "$DOTFILES_DIR/config/claude/statusline.mjs"  "$HOME/.claude/statusline.mjs"
+backup_and_link "$DOTFILES_DIR/config/claude/sounds"          "$HOME/.claude/sounds"
+backup_and_link "$DOTFILES_DIR/config/claude/icons"           "$HOME/.claude/icons"
 
 # 8. Summary
 echo ""

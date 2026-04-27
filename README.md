@@ -47,6 +47,7 @@ Each config file in this repo is symlinked to its expected location.
 | `config/ccstatusline/settings.json` | `~/.config/ccstatusline/settings.json` |
 | `config/claude/CLAUDE.md` | `~/.claude/CLAUDE.md` |
 | `config/claude/settings.json` | `~/.claude/settings.json` |
+| `config/claude/sounds` | `~/.claude/sounds` |
 
 ## How It Works
 
@@ -69,3 +70,7 @@ If a symlink already points to the correct target, it is skipped. If an existing
 - **Terminal:** Ghostty theme and font settings live in `config/ghostty/config`.
 - **Brewfile:** Add or remove packages to fit your workflow, then re-run `brew bundle`.
 - **Claude Code:** Global rules live in `config/claude/CLAUDE.md`. Permissions, model, and plugin settings are in `config/claude/settings.json`.
+
+## Claude Code WoW Sound Hooks
+
+The Claude Code hooks in `config/claude/settings.json` play World of Warcraft sound effects on session events (start, stop, notification, permission request, etc.). The audio files in `config/claude/sounds/wow/` were downloaded from Wowhead's public sound database (wowhead.com, served via the wow.zamimg.com CDN). All sounds are property of Blizzard Entertainment and are included here for personal use only. Playback requires `ffmpeg` (via the Brewfile).
