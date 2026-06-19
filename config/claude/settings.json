@@ -4,6 +4,7 @@
     "AWS_PROFILE": "claude",
     "AWS_REGION": "eu-central-1",
     "CLAUDE_CODE_USE_BEDROCK": "1",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "eu.anthropic.claude-sonnet-4-6",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
     "CLAUDE_CODE_DISABLE_ADAPTIVE_THINKING": "1",
     "CLAUDE_CODE_AUTO_COMPACT_WINDOW": "400000",
@@ -11,13 +12,6 @@
     "DISABLE_ERROR_REPORTING": "1",
     "CLAUDE_CODE_DISABLE_FEEDBACK_SURVEY": "1"
   },
-  "model": "global.anthropic.claude-opus-4-7[1m]",
-  "alwaysThinkingEnabled": true,
-  "effortLevel": "xhigh",
-  "autoMemoryEnabled": true,
-  "showThinkingSummaries": true,
-  "skipDangerousModePermissionPrompt": true,
-  "theme": "light",
   "permissions": {
     "allow": [
       "Read(./**)",
@@ -78,8 +72,7 @@
       "mcp__code-to-figma__figma_edit_text",
       "mcp__code-to-figma__figma_set_properties",
       "mcp__angular-cli__list_projects",
-      "mcp__obsidian",
-      "mcp__pencil"
+      "mcp__obsidian"
     ],
     "deny": [
       "Bash(rm -rf *)",
@@ -102,13 +95,77 @@
     ],
     "defaultMode": "acceptEdits"
   },
+  "model": "eu.anthropic.claude-opus-4-8[1m]",
+  "skillOverrides": {
+    "stackit": "off",
+    "stack-plan": "off",
+    "stack-sync": "off",
+    "stack-review": "off",
+    "stack-restack": "off",
+    "stack-submit": "off",
+    "stack-create": "off",
+    "stack-verify": "off",
+    "stack-status": "off",
+    "stack-describe": "off",
+    "stack-fold": "off",
+    "stack-fix": "off",
+    "stack-absorb": "off",
+    "stack-extract": "off",
+    "stack-split": "off",
+    "ds-generate-variants": "user-invocable-only",
+    "ds-compose-design": "user-invocable-only",
+    "ds-compose-code": "user-invocable-only",
+    "ds-compose": "user-invocable-only",
+    "ds-rebuild-system": "user-invocable-only",
+    "ds-figma-to-code": "user-invocable-only",
+    "figma-generate-design": "user-invocable-only",
+    "figma-generate-library": "user-invocable-only",
+    "figma-implement-design": "user-invocable-only",
+    "figma-create-design-system-rules": "user-invocable-only",
+    "figma-code-connect-components": "user-invocable-only",
+    "figma:figma-generate-design": "user-invocable-only",
+    "figma:figma-generate-library": "user-invocable-only",
+    "figma:figma-implement-design": "user-invocable-only",
+    "figma:figma-create-design-system-rules": "user-invocable-only",
+    "figma:figma-code-connect": "user-invocable-only",
+    "figma:figma-use-figjam": "user-invocable-only",
+    "frontend-design": "user-invocable-only",
+    "frontend-design:frontend-design": "user-invocable-only",
+    "theme-factory": "user-invocable-only",
+    "canvas-design": "user-invocable-only",
+    "web-artifacts-builder": "user-invocable-only",
+    "algorithmic-art": "user-invocable-only",
+    "excalidraw-skill": "user-invocable-only",
+    "amadeus-slides": "user-invocable-only",
+    "pdf": "user-invocable-only",
+    "xlsx": "user-invocable-only",
+    "docx": "user-invocable-only",
+    "pptx": "user-invocable-only",
+    "doc-coauthoring": "user-invocable-only",
+    "internal-comms": "user-invocable-only",
+    "brand-guidelines": "user-invocable-only",
+    "save-note": "user-invocable-only",
+    "claude-api": "user-invocable-only",
+    "mcp-builder": "user-invocable-only",
+    "webapp-testing": "user-invocable-only",
+    "slack-gif-creator": "user-invocable-only",
+    "superpowers:using-git-worktrees": "user-invocable-only",
+    "superpowers:test-driven-development": "user-invocable-only",
+    "superpowers:writing-skills": "user-invocable-only",
+    "keybindings-help": "user-invocable-only",
+    "fewer-permission-prompts": "user-invocable-only",
+    "loop": "user-invocable-only",
+    "init": "user-invocable-only",
+    "security-review": "user-invocable-only",
+    "skill-creator": "user-invocable-only"
+  },
   "hooks": {
     "SessionStart": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "ffplay -nodisp -autoexit -t 8 -af \"afade=t=out:st=7:d=1\" -loglevel quiet ~/.claude/sounds/wow/orgrimmar_intro-moment.mp3 2>/dev/null || true",
+            "command": "ffplay -nodisp -autoexit -volume 60 -t 8 -af \"afade=t=out:st=7:d=1\" -loglevel quiet ~/.claude/sounds/wow/orgrimmar_intro-moment.mp3 2>/dev/null || true",
             "async": true
           }
         ]
@@ -119,7 +176,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash -c 'f=(~/.claude/sounds/wow/PeonYes3.ogg ~/.claude/sounds/wow/PeonPissed1.ogg ~/.claude/sounds/wow/murloc.ogg); ffplay -nodisp -autoexit -loglevel quiet \"${f[RANDOM % ${#f[@]}]}\"' 2>/dev/null || true",
+            "command": "bash -c 'f=(~/.claude/sounds/wow/PeonYes3.ogg ~/.claude/sounds/wow/PeonPissed1.ogg ~/.claude/sounds/wow/murloc.ogg); ffplay -nodisp -autoexit -volume 60 -loglevel quiet \"${f[RANDOM % ${#f[@]}]}\"' 2>/dev/null || true",
             "async": true
           }
         ]
@@ -130,7 +187,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "ffplay -nodisp -autoexit -loglevel quiet ~/.claude/sounds/wow/levelup2.ogg 2>/dev/null || true",
+            "command": "ffplay -nodisp -autoexit -volume 60 -loglevel quiet ~/.claude/sounds/wow/levelup2.ogg 2>/dev/null || true",
             "async": true
           }
         ]
@@ -141,7 +198,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "ffplay -nodisp -autoexit -loglevel quiet ~/.claude/sounds/wow/iQuestComplete.ogg 2>/dev/null || true",
+            "command": "ffplay -nodisp -autoexit -volume 60 -loglevel quiet ~/.claude/sounds/wow/iQuestComplete.ogg 2>/dev/null || true",
             "async": true
           }
         ]
@@ -152,7 +209,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "pkill -f 'ffplay.*\\.claude/sounds/wow' 2>/dev/null; ffplay -nodisp -autoexit -loglevel quiet ~/.claude/sounds/wow/AstralRecall.ogg 2>/dev/null || true",
+            "command": "pkill -f 'ffplay.*\\.claude/sounds/wow' 2>/dev/null; ffplay -nodisp -autoexit -volume 60 -loglevel quiet ~/.claude/sounds/wow/AstralRecall.ogg 2>/dev/null || true",
             "async": true
           }
         ]
@@ -168,7 +225,7 @@
           },
           {
             "type": "command",
-            "command": "bash -c 'f=(~/.claude/sounds/wow/BLACK_Illidan_04.ogg ~/.claude/sounds/wow/IC_Lich_King_FMC01.ogg); ffplay -nodisp -autoexit -loglevel quiet \"${f[RANDOM % ${#f[@]}]}\"' 2>/dev/null || true",
+            "command": "bash -c 'f=(~/.claude/sounds/wow/BLACK_Illidan_04.ogg ~/.claude/sounds/wow/IC_Lich_King_FMC01.ogg); ffplay -nodisp -autoexit -volume 60 -loglevel quiet \"${f[RANDOM % ${#f[@]}]}\"' 2>/dev/null || true",
             "async": true
           }
         ]
@@ -183,7 +240,8 @@
     "frontend-design@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "figma@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
   },
   "spinnerVerbs": {
     "mode": "replace",
@@ -254,5 +312,12 @@
       "The scourge advance",
       "Ner'zhul whispers"
     ]
-  }
+  },
+  "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
+  "autoMemoryEnabled": true,
+  "showThinkingSummaries": true,
+  "skipDangerousModePermissionPrompt": true,
+  "skipWorkflowUsageWarning": true,
+  "theme": "light"
 }
