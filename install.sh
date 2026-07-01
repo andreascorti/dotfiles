@@ -92,7 +92,13 @@ backup_and_link "$DOTFILES_DIR/config/claude/statusline.mjs"  "$HOME/.claude/sta
 backup_and_link "$DOTFILES_DIR/config/claude/sounds"          "$HOME/.claude/sounds"
 backup_and_link "$DOTFILES_DIR/config/claude/icons"           "$HOME/.claude/icons"
 
-# 8. Summary
+# 8. Symlink Antigravity config
+info "Linking Antigravity config..."
+backup_and_link "$DOTFILES_DIR/config/antigravity/settings.json"   "$HOME/.gemini/antigravity-cli/settings.json"
+backup_and_link "$DOTFILES_DIR/config/antigravity/mcp_config.json" "$HOME/.gemini/config/mcp_config.json"
+backup_and_link "$DOTFILES_DIR/config/antigravity/config.json"     "$HOME/.gemini/config/config.json"
+
+# 9. Summary
 echo ""
 info "Setup complete!"
 echo ""

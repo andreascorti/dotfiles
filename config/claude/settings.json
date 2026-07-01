@@ -95,7 +95,6 @@
     ],
     "defaultMode": "acceptEdits"
   },
-  "model": "eu.anthropic.claude-opus-4-8[1m]",
   "skillOverrides": {
     "stackit": "off",
     "stack-plan": "off",
@@ -319,5 +318,6 @@
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "skipWorkflowUsageWarning": true,
-  "theme": "light"
+  "theme": "light",
+  "model": "sonnet"
 }
